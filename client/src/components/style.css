@@ -1,0 +1,113 @@
+.container {
+  display: flex;
+  height: 80vh;
+  width: 100%;
+  flex-direction: column;
+  margin: 0 auto;
+}
+
+.container > * {
+  width: 500px;
+  padding: 8px;
+}
+.container .messages {
+  flex-grow: 1;
+  background-color: #c8c8c8ce;
+  overflow: auto;
+  height: 100%;
+}
+
+.container .messages-header {
+  background-color: teal;
+  color: rgb(255, 255, 255);
+  box-shadow: 0 3px 2px -1px #434343ce;
+}
+
+.container .messages .messages-body {
+  display: flex;
+  flex-direction: column;
+}
+
+.container .messages .messages-body .messages-item {
+  display: flex;
+  padding: 0 6.5%;
+  margin-bottom: 10px;
+  border-radius: 5px;
+}
+
+.container .messages .messages-body .messages-item:nth-of-type(odd) {
+  max-width: 85%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.container .messages .messages-body .messages-item div {
+  max-width: 85%;
+  padding: 8px;
+  border-radius: 5px;
+  position: relative;
+  background-color: white;
+}
+.container .messages .messages-body .messages-item:nth-of-type(odd) div {
+  background-color: aqua;
+  align-items: flex-end;
+}
+
+.container .messages .messages-body .messages-item div span {
+  position: absolute;
+  top: 0;
+  left: -8px;
+  z-index: 100;
+  display: block;
+  width: 0;
+  height: 0;
+  border-left: 8px solid transparent;
+  border-right: 8px solid white;
+  border-top: 8px solid white;
+  border-bottom: 8px solid transparent;
+}
+
+.container .messages .messages-body .messages-item:nth-of-type(odd) div span {
+  left: auto;
+  right: -8px;
+  border-left: 8px solid aqua;
+  border-right: 8px solid transparent;
+  border-top: 8px solid aqua;
+  border-bottom: 8px solid transparent;
+}
+.container form {
+  display: flex;
+  box-shadow: -0 -3px 2px -1px #434343ce;
+  height: 50px;
+  background: #2a2929ce;
+}
+.container form input[type="text"] {
+  flex: 75%;
+  font-size: 16px;
+  padding: 8px 10px;
+  border: 2px solid #434343ce;
+  background-color: #ecececa6;
+  border-radius: 5px;
+  margin-right: 20px;
+  margin-left: 8px;
+  transition: all 0.3s linear;
+}
+.container form input[type="text"]:focus {
+  border: 2px solid #111111ce;
+  transform: scale(1.03);
+  outline: 0;
+}
+
+.container form input[type="submit"] {
+  flex: 25%;
+  outline: 0;
+  border: 0;
+  font-size: 18px;
+  font-weight: bold;
+  border-radius: 5px;
+  background-color: tomato;
+  color: white;
+  padding: 10px;
+  margin-right: 8px;
+  cursor: pointer;
+}
